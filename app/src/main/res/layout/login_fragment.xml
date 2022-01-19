@@ -58,6 +58,8 @@
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:gravity="start"
+            android:maxLines="1"
+            android:inputType="text"
             android:textSize="18dp"
             android:textColor="@color/black"
             android:textColorHint="#888888"
@@ -74,6 +76,8 @@
             android:gravity="start"
             android:textSize="18dp"
             android:hint="Password"
+            android:maxLines="1"
+            android:inputType="textPassword"
             android:textColor="@color/black"
             android:textColorHint="#888888"
             android:fontFamily="sans-serif"
@@ -81,6 +85,14 @@
             app:layout_constraintBottom_toTopOf="@id/forgetpassword"
             app:layout_constraintTop_toBottomOf="@id/email_login"
             app:layout_constraintLeft_toLeftOf="@id/email_login"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@id/login_password"
+            app:layout_constraintTop_toTopOf="@id/login_password"
+            app:layout_constraintBottom_toBottomOf="@id/login_password"
+            android:background="@drawable/ic_launcher_background"/>
 
         <TextView
             android:id="@+id/forgetpassword"
