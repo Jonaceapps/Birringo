@@ -45,7 +45,7 @@
             android:textSize="25dp"
             android:fontFamily="sans-serif"
             android:textColor="@color/black"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="260dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -87,12 +87,16 @@
             app:layout_constraintLeft_toLeftOf="@id/email_login"/>
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintLeft_toRightOf="@id/login_password"
+            android:id="@+id/show_hide_pass"
+            android:layout_width="50dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="250dp"
+            app:layout_constraintLeft_toLeftOf="@id/login_password"
+            app:layout_constraintRight_toRightOf="@id/login_password"
             app:layout_constraintTop_toTopOf="@id/login_password"
             app:layout_constraintBottom_toBottomOf="@id/login_password"
-            android:background="@drawable/ic_launcher_background"/>
+            android:src="@drawable/show_password"
+            app:tint="#8C8C8C"/>
 
         <TextView
             android:id="@+id/forgetpassword"

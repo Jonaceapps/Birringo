@@ -1,6 +1,8 @@
 package com.example.birringo
 
 import android.os.Bundle
+import android.text.method.HideReturnsTransformationMethod
+import android.text.method.PasswordTransformationMethod
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,6 +13,7 @@ import kotlinx.android.synthetic.main.register_fragment.view.*
 
 class RegisterFragment : Fragment(){
     var homeActivity: HomeActivity? = null
+    var cambioEstado = true
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -23,6 +26,20 @@ class RegisterFragment : Fragment(){
 
         view.signin.setOnClickListener {
             homeActivity?.changeFragmentTo(1)
+        }
+
+        view.show_hide_pass2.setOnClickListener {
+            if (cambioEstado && view.register_password.text.isNotEmpty()) {
+                cambioEstado = false
+                view.register_password.transformationMethod =
+                    HideReturnsTransformationMethod.getInstance()
+                view.show_hide_pass2.setImageResource(R.drawable.hidden_password)
+            } else if (!cambioEstado && view.register_password.text.isNotEmpty()){
+                cambioEstado = true
+                view.register_password.transformationMethod =
+                    PasswordTransformationMethod.getInstance()
+                view.show_hide_pass2.setImageResource(R.drawable.show_password)
+            }
         }
 
         return view
