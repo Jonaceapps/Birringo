@@ -13,6 +13,7 @@ class HomeActivity : AppCompatActivity() {
     var fragmentManager: FragmentManager? = null
     var fragmentTransaction: FragmentTransaction? = null
     val loginFragment : LoginFragment = LoginFragment()
+    val registerFragment : RegisterFragment = RegisterFragment()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,10 +31,10 @@ class HomeActivity : AppCompatActivity() {
                 fragmentTransaction?.replace(R.id.flFragmentContainer, loginFragment, "Login")
                // mNavigationView.visibility = View.INVISIBLE
             }
-            /*2 -> {
-                fragmentTransaction?.replace(R.id.flFragmentContainer, searchFragment, "Search")
-                mNavigationView.visibility = View.VISIBLE
-            }*/
+            2 -> {
+                fragmentTransaction?.replace(R.id.flFragmentContainer, registerFragment, "Register")
+                //mNavigationView.visibility = View.VISIBLE
+            }
 
             else -> {
                 Toast.makeText(this, "Error", Toast.LENGTH_SHORT).show()

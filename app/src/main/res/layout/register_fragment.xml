@@ -31,7 +31,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraint2"
-        android:layout_marginTop="400dp"
+        android:layout_marginTop="270dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/background">
@@ -40,35 +40,62 @@
             android:id="@+id/registerTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Login"
+            android:text="Register"
             android:textColorHint="#888888"
             android:textSize="25dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
             android:fontFamily="sans-serif"
             android:textColor="@color/black"
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="10dp"
             android:layout_marginRight="260dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/email_login"/>
-
+            app:layout_constraintBottom_toTopOf="@id/username"/>
         <EditText
-            android:id="@+id/email_login"
+            android:id="@+id/username"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:gravity="start"
             android:textSize="18dp"
             android:textColor="@color/black"
             android:textColorHint="#888888"
-            android:hint="Email or phone"
-            android:layout_marginTop="16dp"
-            app:layout_constraintBottom_toTopOf="@id/login_password"
+            android:hint="Username"
+            android:layout_marginTop="14dp"
+            app:layout_constraintBottom_toTopOf="@id/email"
             app:layout_constraintLeft_toLeftOf="@id/registerTitle"
             app:layout_constraintTop_toBottomOf="@id/registerTitle" />
 
         <EditText
-            android:id="@+id/login_password"
+            android:id="@+id/email"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:textSize="18dp"
+            android:textColor="@color/black"
+            android:textColorHint="#888888"
+            android:hint="Email"
+            android:layout_marginTop="14dp"
+            app:layout_constraintBottom_toTopOf="@id/phone"
+            app:layout_constraintLeft_toLeftOf="@id/registerTitle"
+            app:layout_constraintTop_toBottomOf="@id/username" />
+
+        <EditText
+            android:id="@+id/phone"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:textSize="18dp"
+            android:textColor="@color/black"
+            android:textColorHint="#888888"
+            android:hint="Phone"
+            android:layout_marginTop="14dp"
+            app:layout_constraintBottom_toTopOf="@id/password"
+            app:layout_constraintTop_toBottomOf="@id/email"
+            app:layout_constraintLeft_toLeftOf="@id/email" />
+
+        <EditText
+            android:id="@+id/password"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:gravity="start"
@@ -77,24 +104,32 @@
             android:textColor="@color/black"
             android:textColorHint="#888888"
             android:fontFamily="sans-serif"
-            android:layout_marginTop="16dp"
-            app:layout_constraintBottom_toTopOf="@id/forgetpassword"
-            app:layout_constraintTop_toBottomOf="@id/email_login"
-            app:layout_constraintLeft_toLeftOf="@id/email_login"/>
+            android:layout_marginTop="14dp"
+            app:layout_constraintBottom_toTopOf="@id/terms_text"
+            app:layout_constraintTop_toBottomOf="@id/phone"
+            app:layout_constraintLeft_toLeftOf="@id/email"/>
 
         <TextView
-            android:id="@+id/forgetpassword"
+            android:id="@+id/terms_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:text="Forget password?"
+            android:text="I agree to the Terms &amp; Conditions"
             android:textSize="15dp"
-            android:layout_marginLeft="5dp"
             android:textColor="#F39425"
-            app:layout_constraintTop_toBottomOf="@id/login_password"
+            app:layout_constraintTop_toBottomOf="@id/password"
             app:layout_constraintBottom_toTopOf="@id/btnRegister"
-            app:layout_constraintLeft_toLeftOf="@id/login_password"
+            app:layout_constraintLeft_toRightOf="@id/terms_checkbox"
             />
+        <CheckBox
+            android:id="@+id/terms_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="@id/password"
+            app:layout_constraintRight_toLeftOf="@id/terms_text"
+            app:layout_constraintTop_toTopOf="@id/terms_text"
+            app:layout_constraintBottom_toBottomOf="@id/terms_text"/>
+
 
         <Button
             android:id="@+id/btnRegister"
@@ -104,22 +139,22 @@
             android:layout_marginLeft="100dp"
             android:layout_marginRight="100dp"
             android:gravity="center"
-            android:text="Login"
+            android:text="Register"
             android:backgroundTint="#F39425"
             android:textAlignment="center"
-            app:layout_constraintBottom_toTopOf="@id/signup"
+            app:layout_constraintBottom_toTopOf="@id/signin"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/forgetpassword" />
+            app:layout_constraintTop_toBottomOf="@id/terms_text" />
 
         <TextView
-            android:id="@+id/signup"
+            android:id="@+id/signin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="You don't have account? Sign up"
+            android:text="Already have an account? Sign in"
             android:textSize="16dp"
             android:textColor="@color/black"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="30dp"
             android:layout_marginTop="5dp"
             app:layout_constraintBottom_toBottomOf="@id/constraint2"
             app:layout_constraintTop_toBottomOf="@id/btnRegister"
