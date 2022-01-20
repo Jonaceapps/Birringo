@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Birringo</string>
+    <string name="all">TODO</string>
+    <string name="tab_text_1">Sun</string>
+    <string name="tab_text_2">Moon</string>
+    <string name="title">Pedidos</string>
+    <string name="description_order">Pedí la comidas y bebidas que deseas desde la App. Descubre el menú de tus restaurantes favoritos.</string>
+    <string name="description_discount">Todo el tiempo tenemos descuentos interesantes y ofertas exclusivas.   No dejes pasar estas oportunidades.</string>
+    <string name="description_delivery">Pide tus comidas y bebidas favoritas te traeremos hasta donde estés. Te llevaremos en tiempo récord. </string>
 </resources>

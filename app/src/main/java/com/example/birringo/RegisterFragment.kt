@@ -27,6 +27,9 @@ class RegisterFragment : Fragment(){
         view.signin.setOnClickListener {
             homeActivity?.changeFragmentTo(1)
         }
+        view.btnRegister.setOnClickListener {
+            homeActivity?.changeFragmentTo(3)
+        }
 
         view.show_hide_pass2.setOnClickListener {
             if (cambioEstado && view.register_password.text.isNotEmpty()) {
